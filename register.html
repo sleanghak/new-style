@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+      <!-- Link google fonts khmer Moulpali -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Moulpali&display=swap" rel="stylesheet">
+      <!-- Link google fonts english Barlow -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+      <!-- header use for display logo  -->
+      <link rel="icon" type="image/x-icon" href="./imglogo.jpg">
+      <title>New Style</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #25265EB3;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 13px;
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+            }
+
+            .title {
+                font-size: 23px;
+            }
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            body {
+                font-size: 13px;
+                margin-left: 4%;
+                margin-right: 4%;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+        }
+
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            body {
+                font-size: 15px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            body {
+                font-size: 15px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            body {
+                font-size: 15px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+        }
+
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=email]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Overwrite default styles of hr */
+        hr {
+            border: 1px solid #eaeaea;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for the submit button */
+        .registerbtn {
+            background-color: #55ACEE;
+            color: white;
+            padding: 14px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            background-color: #349ae7;
+        }
+
+        /* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+            /* background-color: #f1f1f1; */
+            text-align: center;
+        }
+
+        .footer {
+            padding: 2rem 0;
+            border-top: 1px solid #eaeaea;
+        }
+
+        /* style menu */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div style=" display: flex;justify-content: space-between;">
+        <h3 style="font-size: 20px;font-family: 'Moulpali', cursive;">New Style</h3>
+        <button style=" 
+        width: 70px;
+        padding: 5px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 20px;
+        text-decoration: none;
+        background-color: #55ACEE;
+       " type="button">
+            <a style="text-decoration: none; color: #FFF;" href="./login.html">Login</a>
+        </button>
+    </div><br>
+    <form>
+        <div><br>
+            <h1 class="title" style="font-family: 'Barlow', sans-serif;">Register !</h1><br>
+            <p>Please fill in this form to create an account. Your password must be at least 6 characterslong,
+                containing at least one letter and one number.</p>
+            <hr>
+
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Your Name" name="name" id="name" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            <hr>
+            <p>By creating an account you agree to our <a style=" color: #55ACEE;" href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" class="registerbtn">Register</button>
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? <a style=" color: #55ACEE;" href="./login.html">Sign in</a>.</p>
+        </div>
+    </form><br>
+    <footer class="footer">
+        <!-- menu -->
+        <ul style="font-family: 'Roboto', sans-serif;">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul><br>
+        <!-- footer  -->
+        <div style="display: flex;justify-content: space-between;">
+            <p > Powered by New Style • &copy; 2023</p>
+            <span>
+                <p>Contact</p>
+                <a style=" text-decoration: none;" href="https://www.facebook.com/profile.php?id=100046612111709&mibextid=LQQJ4d"
+                    target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/20/20837.png" alt="facebook" width="20px"
+                        height="20x">
+                </a>
+                <a style="margin-left: 10px; text-decoration: none;" href="https://t.me/Chhiv_lik"
+                    target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4423/4423446.png" alt="telegram" width="20px"
+                        height="20x">
+                </a>
+
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>

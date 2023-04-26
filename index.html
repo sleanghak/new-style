@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link google fonts khmer Moulpali -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moulpali&display=swap" rel="stylesheet">
+    <!-- Link google fonts english Barlow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <!-- header use for display logo  -->
+    <link rel="icon" type="image/x-icon" href="./imglogo.jpg">
+    <title>New Style</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #25265EB3;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 13px;
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+            }
+
+            .title {
+                font-size: 23px;
+            }
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            body {
+                font-size: 13px;
+                margin-left: 4%;
+                margin-right: 4%;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+        }
+
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            body {
+                font-size: 15px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            body {
+                font-size: 15px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            body {
+                font-size: 15px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+        }
+
+        h3 {
+            font-family: 'Moulpali', cursive;
+        }
+
+        .footer {
+            display: block;
+            padding: 2rem 0;
+            border-top: 1px solid #eaeaea;
+        }
+
+        hr {
+            border: 1px solid #eaeaea;
+            margin-bottom: 25px;
+        }
+
+        /* style menu */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* style slider img */
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+
+        /* style for btn go to top */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            padding: 8px;
+            z-index: 99;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+
+        .col-3 {
+            width: 100%;
+            padding: 12px;
+
+        }
+
+        .col-3 img {
+            width: 100%;
+        }
+
+        .col-3 h4 {
+            text-align: center;
+        }
+
+        .col-3 div {
+            /* border: 1px solid #CCC; */
+            box-shadow: 2px 2px 2px rgb(221, 216, 216);
+        }
+
+        .padding {
+            padding: 10px;
+        }
+
+        .color {
+            color: red;
+        }
+
+        /*max-width start: 0px - 600px */
+        @media only screen and (max-width: 600px) {
+            .col-3 {
+                width: 100%;
+            }
+        }
+
+        /*min-width start 600px -768px */
+        @media only screen and (min-width: 600px) {
+            .col-3 {
+                width: 50%;
+            }
+        }
+
+        /*min-width start 768px->992px */
+        @media only screen and (min-width: 768px) {
+            .col-3 {
+                width: 50%;
+            }
+        }
+
+        /*min-width start 992px-1200px */
+        @media only screen and (min-width: 992px) {
+            .col-3 {
+                width: 50%;
+            }
+        }
+
+        /*min-width start 1200px->up */
+        @media only screen and (min-width: 1200px) {
+            .col-3 {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style=" display: flex;justify-content: space-between;">
+        <h3 style="font-size: 20px;">New Style</h3>
+        <button style=" 
+        width: 70px;
+        padding: 5px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 20px;
+        text-decoration: none;
+        background-color: #55ACEE;
+       " type="button">
+            <a style="text-decoration: none; color: #FFF;" href="./login.html">Login</a>
+        </button>
+    </div><br>
+
+    <div>
+
+        <!-- card product -->
+        <div style="float: left;" class="col-3">
+            <div>
+                <img src="./photo_2023-04-25_16-22-03.jpg" alt="img">
+                <div class="padding">
+                    <h4>STRINGS Guitar Strings - Cambodia | WD-40 Asia</h4><br>
+                    <h4 class="color"> $99.99 </h4>
+                </div>
+            </div>
+        </div>
+
+        <div style="float: left;" class="col-3">
+            <div>
+                <img src="./photo_2023-04-25_16-22-03.jpg" alt="img">
+                <div class="padding">
+                    <h4>STRINGS Guitar Strings - Cambodia | WD-40 Asia</h4><br>
+                    <h4 class="color"> $99.99 </h4>
+                </div>
+            </div>
+        </div>
+
+        <div style="float: left;" class="col-3">
+            <div>
+                <img src="./photo_2023-04-25_16-22-03.jpg" alt="img">
+                <div class="padding">
+                    <h4>STRINGS Guitar Strings - Cambodia | WD-40 Asia</h4><br>
+                    <h4 class="color"> $99.99 </h4>
+                </div>
+            </div>
+        </div>
+
+        <div style="float: left;" class="col-3">
+            <div>
+                <img src="./photo_2023-04-25_16-22-03.jpg" alt="img">
+                <div class="padding">
+                    <h4>STRINGS Guitar Strings - Cambodia | WD-40 Asia</h4><br>
+                    <h4 class="color"> $99.99 </h4>
+                </div>
+            </div>
+        </div>
+        <div style="float: left;" class="col-3">
+            <div>
+                <img src="./photo_2023-04-25_16-22-03.jpg" alt="img">
+                <div class="padding">
+                    <h4>STRINGS Guitar Strings - Cambodia | WD-40 Asia</h4><br>
+                    <h4 class="color"> $99.99 </h4>
+                </div>
+            </div>
+        </div>
+        <div style="float: left;" class="col-3">
+            <div>
+                <img src="./photo_2023-04-25_16-22-03.jpg" alt="img">
+                <div class="padding">
+                    <h4>STRINGS Guitar Strings - Cambodia | WD-40 Asia</h4><br>
+                    <h4 class="color"> $99.99 </h4>
+                </div>
+            </div>
+        </div>
+        <div style="float: left;" class="col-3">
+            <div>
+                <img src="./photo_2023-04-25_16-22-03.jpg" alt="img">
+                <div class="padding">
+                    <h4>STRINGS Guitar Strings - Cambodia | WD-40 Asia</h4><br>
+                    <h4 class="color"> $99.99 </h4>
+                </div>
+            </div>
+        </div>
+        <div style="float: left;" class="col-3">
+            <div>
+                <img src="./photo_2023-04-25_16-22-03.jpg" alt="img">
+                <div class="padding">
+                    <h4>STRINGS Guitar Strings - Cambodia | WD-40 Asia</h4><br>
+                    <h4 class="color"> $99.99 </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                <img src="./photo_2023-04-25_16-22-03.jpg" alt="img">
+                <div class="padding">
+                    <h4>STRINGS Guitar Strings - Cambodia | WD-40 Asia</h4><br>
+                    <h4 class="color"> $99.99 </h4>
+                </div>
+            </div>
+        </div>
+
+
+    </div><br>
+
+
+    <footer class="footer">
+        <!-- menu -->
+        <ul style="font-family: 'Roboto', sans-serif;">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul><br>
+        <!-- footer  -->
+        <div style="display: flex;justify-content: space-between;">
+            <p> Powered by New Style • &copy; 2023</p>
+            <span>
+                <p>Contact</p>
+                <a style=" text-decoration: none;"
+                    href="https://www.facebook.com/profile.php?id=100046612111709&mibextid=LQQJ4d" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/20/20837.png" alt="facebook" width="20px"
+                        height="20x">
+                </a>
+                <a style="margin-left: 10px; text-decoration: none;" href="https://t.me/Chhiv_lik" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4423/4423446.png" alt="telegram" width="20px"
+                        height="20x">
+                </a>
+
+            </span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
